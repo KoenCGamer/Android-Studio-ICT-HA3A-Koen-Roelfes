@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E73F1E"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,7 +23,7 @@
         app:layout_constraintVertical_bias="0.044" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_voorpagina"
         android:layout_width="246dp"
         android:layout_height="95dp"
         android:backgroundTint="#F9B637"
