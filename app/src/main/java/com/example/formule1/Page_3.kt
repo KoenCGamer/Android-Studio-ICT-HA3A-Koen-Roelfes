@@ -1,6 +1,7 @@
 package com.example.formule1
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,15 @@ class Page_3 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        val result = findViewById<TextView>(R.id.viewtest)
+        val teamname = intent.getStringExtra("teamnaam").toString()
+        val name = intent.getStringExtra("naam").toString()
+        val email = intent.getStringExtra("email").toString()
+        result.text = "Teamnaam = $teamname Naam = $name E-Mail = $email."
+
+
+
     }
 }
