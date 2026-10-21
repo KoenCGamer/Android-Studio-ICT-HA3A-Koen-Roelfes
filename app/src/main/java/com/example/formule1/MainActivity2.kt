@@ -31,11 +31,11 @@ class MainActivity2 : AppCompatActivity() {
             val teamnaam = teamname.text.toString();
             val naam = name.text.toString();
             val email = email.text.toString();
-            Toast.makeText(this, "Pro Speedrunner/Pro Programeerder", Toast.LENGTH_SHORT).show()
-            intent.putExtra("teamnaam", teamnaam)
-            intent.putExtra("naam", naam)
-            intent.putExtra("email", email)
-            val intent = Intent(this, Page_3::class.java)
+            Toast.makeText(this, "Pro Speedrunner/Pro Programeerder", Toast.LENGTH_SHORT).show();
+            intent.putExtra("teamnaam", teamnaam);
+            intent.putExtra("naam", naam);
+            intent.putExtra("email", email);
+            val intent = Intent(this, Page_3::class.java);
             startActivity(intent)
         }
 

@@ -1,7 +1,10 @@
 package com.example.formule1
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,12 +23,18 @@ class Page_3 : AppCompatActivity() {
 
 
         val result = findViewById<TextView>(R.id.viewtest)
-        val teamname = intent.getStringExtra("teamnaam").toString()
-        val name = intent.getStringExtra("naam").toString()
-        val email = intent.getStringExtra("email").toString()
-        result.text = "Teamnaam = $teamname Naam = $name E-Mail = $email."
+        val teamnaam = intent.getStringExtra("teamnaam").toString();
+        val naam = intent.getStringExtra("naam").toString();
+        val email = intent.getStringExtra("email").toString();
+        result.text = "Teamnaam = $teamnaam Naam = $naam E-Mail = $email.";
 
 
+        val coureuryes = findViewById<Button>(R.id.coureurja)
+        coureuryes.setOnClickListener {
+            Toast.makeText(this, "Pro Speedrunner/Pro Programeerder", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Gegevens::class.java)
+            startActivity(intent)
 
+        }
     }
 }
