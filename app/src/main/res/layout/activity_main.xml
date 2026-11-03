@@ -29,6 +29,7 @@
         android:backgroundTint="#F9B637"
         android:text="Start"
         android:textSize="40sp"
+        app:cornerRadius="@dimen/cardview_default_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

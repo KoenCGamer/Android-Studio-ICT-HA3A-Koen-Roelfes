@@ -8,6 +8,14 @@
     android:background="#E73F1E"
     tools:context=".Gegevens">
 
+    <ImageView
+        android:id="@+id/button_pagefourback"
+        android:layout_width="43dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/navigation_left_arrow_navigation_indicator_png_thumb__1_" />
+
     <EditText
         android:id="@+id/editTextText4"
         android:layout_width="306dp"
@@ -38,7 +46,7 @@
         android:id="@+id/textView4"
         android:layout_width="364dp"
         android:layout_height="125dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="52dp"
         android:text="Vul uw gegevens in."
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,11 +68,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/klaar_gegevens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:text="Button"
+        app:cornerRadius="@dimen/cardview_default_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

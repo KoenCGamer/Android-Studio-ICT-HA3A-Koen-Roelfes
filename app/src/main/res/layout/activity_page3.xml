@@ -8,15 +8,48 @@
     android:background="#E73F1E"
     tools:context=".Page_3" >
 
+    <Button
+        android:id="@+id/coureurnee"
+        android:layout_width="135dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="48dp"
+        android:text="Nee"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/coureurja"
+        android:layout_width="135dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="48dp"
+        android:text="Ja"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/button_pagethreeback"
+        android:layout_width="43dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/navigation_left_arrow_navigation_indicator_png_thumb__1_" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="388dp"
         android:layout_height="88dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="52dp"
         android:text="Wilt u een coureur?"
         android:textColor="#FFDD9C"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,23 +65,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.56" />
 
-    <Button
-        android:id="@+id/coureurja"
-        android:layout_width="120dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="68dp"
-        android:text="Ja"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="117dp"
-        android:layout_height="71dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="68dp"
-        android:text="Nee"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
