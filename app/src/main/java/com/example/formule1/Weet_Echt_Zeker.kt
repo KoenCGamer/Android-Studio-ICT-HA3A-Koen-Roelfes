@@ -6,6 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Button
+import android.content.Intent
 
 class Weet_Echt_Zeker : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +24,10 @@ class Weet_Echt_Zeker : AppCompatActivity() {
             finish()
 
         }
-
-
-
+        val weet_echt_zeker_ja = findViewById<Button>(R.id.weet_echt_zeker_ja)
+        weet_echt_zeker_ja.setOnClickListener {
+            val intent =Intent( this, EECCHHTT::class.java)
+            startActivity(intent)
+        }
     }
 }

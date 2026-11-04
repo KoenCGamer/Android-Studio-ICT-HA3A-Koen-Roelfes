@@ -22,7 +22,7 @@ class Gegevens : AppCompatActivity() {
         }
         val klaargegevens = findViewById<Button>(R.id.klaar_gegevens)
         klaargegevens.setOnClickListener {
-            val intent = Intent(this, Gegevens::class.java)
+            val intent = Intent(this, Bestel::class.java)
             startActivity(intent)
 
         }

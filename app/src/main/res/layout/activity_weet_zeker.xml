@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/navigation_left_arrow_navigation_indicator_png_thumb__1_" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/weet_zeker_nee"
         android:layout_width="135dp"
         android:layout_height="95dp"
         android:layout_marginBottom="48dp"

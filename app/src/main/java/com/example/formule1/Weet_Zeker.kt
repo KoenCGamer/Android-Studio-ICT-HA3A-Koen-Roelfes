@@ -25,6 +25,12 @@ class Weet_Zeker : AppCompatActivity() {
             startActivity(intent)
 
         }
+        val weet_zeker_nee = findViewById<Button>(R.id.weet_zeker_nee)
+        weet_zeker_ja.setOnClickListener {
+            val intent = Intent(this, Weet_Echt_Zeker::class.java)
+            startActivity(intent)
+
+        }
         val page_weet_zeker_back_button = findViewById<ImageView>(R.id.button_weet_zeker_terug)
         page_weet_zeker_back_button.setOnClickListener {
             finish()
