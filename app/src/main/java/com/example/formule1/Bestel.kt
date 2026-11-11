@@ -20,49 +20,39 @@ class Bestel : AppCompatActivity() {
             insets
         }
 
-        // val result = findViewById<TextView>(R.id.textView8)
-        // val teamnaam = intent.getStringExtra("teamnaam").toString();
-        // val naam = intent.getStringExtra("naam").toString();
-        // val email = intent.getStringExtra("email").toString();
-        // result.text = "Teamnaam = $teamnaam Naam = $naam E-Mail = $email.";
-
-       // val textView = findViewById<TextView>(R.id.textView8)
-        // val htmlTekst = "Informatie:<br>" +
-        //      "- $naam <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //      "- <br>" +
-        //         "- <br>" +
-        //       "- <br>" +
-        //        "- <br>" +
-        //        "- <br>" +
-        //        "- <br>" +
-        //        "- <br>" +
-        //        "- <br>" +
-        //        "- <br>" +
-        //        "- <br>"
+        val sharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE)
+        val naam = sharedPreferences.getString("naam", "")
+        val email = sharedPreferences.getString("email", "")
+        val teamnaam = sharedPreferences.getString("teamnaam", "")
+        val voornaam_coureur = sharedPreferences.getString("voornaam_coureur", "")
+        val achternaam_coureur = sharedPreferences.getString("achternaam_coureur", "")
+        val sponsor_coureur = sharedPreferences.getString("sponsor_coureur", "")
 
 
-       // textView.text = Html.fromHtml(htmlTekst, Html.FROM_HTML_MODE_COMPACT)
 
-        val textView = findViewById<TextView>(R.id.textView8)
+            val textView = findViewById<TextView>(R.id.textView8)
+         val htmlTekst = "Informatie:<br>" +
+              "- $naam <br>" +
+              "- $teamnaam <br>" +
+              "- $email <br>" +
+              "- $voornaam_coureur <br>" +
+              "- $achternaam_coureur <br>" +
+              "- $sponsor_coureur <br>" +
+              "- <br>" +
+              "- <br>" +
+                 "- <br>" +
+               "- <br>" +
+                "- <br>" +
+                "- <br>" +
+                "- <br>" +
+                "- <br>"
 
-// Haal eerst de gegevens op via de Intent
-        val teamnaam = intent.getStringExtra("teamnaam") ?: ""
-        val naam = intent.getStringExtra("naam") ?: ""
-        val email = intent.getStringExtra("email") ?: ""
-
-// Stop ze vervolgens in je HTML-tekststructuur
-        val htmlTekst = "Informatie:<br>" +
-                "- Team: <u>$teamnaam</u><br>" +
-                "- Naam: <u>$naam</u><br>" +
-                "- E-mail: <u>$email</u><br>"
 
         textView.text = Html.fromHtml(htmlTekst, Html.FROM_HTML_MODE_COMPACT)
+
+
+
+
 
         val bestel_terug = findViewById<ImageView>(R.id.button_bestel_back)
         bestel_terug.setOnClickListener {

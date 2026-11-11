@@ -17,26 +17,26 @@
         app:srcCompat="@drawable/navigation_left_arrow_navigation_indicator_png_thumb__1_" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/achternaam_coureur"
         android:layout_width="306dp"
         android:layout_height="59dp"
         android:layout_marginBottom="332dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Achternaam Coureur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/sponsor_coureur"
         android:layout_width="306dp"
         android:layout_height="59dp"
         android:layout_marginBottom="248dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Sponsor Coureur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -44,24 +44,23 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="364dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="52dp"
-        android:text="Vul uw gegevens in."
+        android:layout_width="385dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="60dp"
+        android:text="Vul uw gegevens in van uw coureur."
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/voornaam_coureur"
         android:layout_width="306dp"
         android:layout_height="59dp"
         android:layout_marginBottom="416dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Voornaam Coureur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

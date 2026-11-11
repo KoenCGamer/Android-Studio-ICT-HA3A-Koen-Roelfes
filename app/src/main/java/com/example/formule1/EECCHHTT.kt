@@ -1,6 +1,8 @@
 package com.example.formule1
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,9 +19,10 @@ class EECCHHTT : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    val REALLY_SURE_REALLY = findViewById<ImageView>(R.id.button_ECHT_ZEKER_ECHT_ZEKER)
-        REALLY_SURE_REALLY.setOnClickListener {
-            finish()
+        val ECHT_ZEKER_ECHT_ZEKER_JA = findViewById<Button>(R.id.button_ECHT_ZEKER_ECHT_ZEKER_JA)
+        ECHT_ZEKER_ECHT_ZEKER_JA.setOnClickListener {
+            val intent =Intent( this, Bestel::class.java)
+            startActivity(intent)
         }
     }
 }

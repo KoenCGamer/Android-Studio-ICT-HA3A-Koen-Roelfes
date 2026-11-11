@@ -10,7 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.ImageView
 import android.widget.Toast
-
+import android.content.Context
+import android.provider.Settings.Global.putInt
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,18 +29,16 @@ class MainActivity2 : AppCompatActivity() {
 
         val next_button_page_2 = findViewById<Button>(R.id.to_next_page_3)
         next_button_page_2.setOnClickListener {
-            val teamnaam = teamname.text.toString();
-            val naam = name.text.toString();
-            val email = email.text.toString();
-            Toast.makeText(this, "Pro Speedrunner/Pro Programeerder", Toast.LENGTH_SHORT).show();
+            val sharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+
+            editor.putString("naam", name.text.toString())
+            editor.putString("email", email.text.toString())
+            editor.putString("teamnaam", teamname.text.toString())
+            editor.apply()
             val intent = Intent(this, Page_3::class.java);
-            intent.putExtra("teamnaam", teamnaam);
-            intent.putExtra("naam", naam);
-            intent.putExtra("email", email);
             startActivity(intent)
         }
-
-
 
         val page_two_back_button = findViewById<ImageView>(R.id.button_pagetwoback)
         page_two_back_button.setOnClickListener {

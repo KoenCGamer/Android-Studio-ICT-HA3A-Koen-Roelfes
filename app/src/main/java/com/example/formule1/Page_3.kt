@@ -23,11 +23,11 @@ class Page_3 : AppCompatActivity() {
         }
 
 
-        val result = findViewById<TextView>(R.id.viewtest)
-        val teamnaam = intent.getStringExtra("teamnaam").toString();
-        val naam = intent.getStringExtra("naam").toString();
-        val email = intent.getStringExtra("email").toString();
-        result.text = "Teamnaam = $teamnaam Naam = $naam E-Mail = $email.";
+     //   val result = findViewById<TextView>(R.id.viewtest)
+     //  val teamnaam = intent.getStringExtra("teamnaam").toString();
+      //  val naam = intent.getStringExtra("naam").toString();
+       // val email = intent.getStringExtra("email").toString();
+     //   result.text = "Teamnaam = $teamnaam Naam = $naam E-Mail = $email.";
 
 
         val coureuryes = findViewById<Button>(R.id.coureurja)
