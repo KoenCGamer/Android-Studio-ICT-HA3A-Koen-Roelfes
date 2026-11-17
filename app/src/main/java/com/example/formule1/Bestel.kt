@@ -1,5 +1,6 @@
 package com.example.formule1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
 import android.text.Html
+import android.widget.Button
+import androidx.core.content.edit
 
 class Bestel : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +31,6 @@ class Bestel : AppCompatActivity() {
         val achternaam_coureur = sharedPreferences.getString("achternaam_coureur", "")
         val sponsor_coureur = sharedPreferences.getString("sponsor_coureur", "")
 
-
-
             val textView = findViewById<TextView>(R.id.textView8)
          val htmlTekst = "Informatie:<br>" +
               "- $naam <br>" +
@@ -47,12 +48,14 @@ class Bestel : AppCompatActivity() {
                 "- <br>" +
                 "- <br>"
 
-
         textView.text = Html.fromHtml(htmlTekst, Html.FROM_HTML_MODE_COMPACT)
 
-
-
-
+        val bestel = findViewById<Button>(R.id.button_bestel)
+        bestel.setOnClickListener {
+            val intent =Intent( this, MainActivity::class.java)
+            getSharedPreferences("UserPreferences", MODE_PRIVATE).edit { clear() }
+            startActivity(intent)
+        }
 
         val bestel_terug = findViewById<ImageView>(R.id.button_bestel_back)
         bestel_terug.setOnClickListener {
